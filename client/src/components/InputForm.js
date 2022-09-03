@@ -16,7 +16,7 @@ const InputForm = ({ apiData, setApiData }) => {
     const fetch = async () => {
       try {
         const { data } = await axios.get(url);
-        console.log(data);
+        // console.log(data);
         if (data?.MRData?.RaceTable?.Races.length === 0) {
           setApiData((apiData) => ({
             ...apiData,

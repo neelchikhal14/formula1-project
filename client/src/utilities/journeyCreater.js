@@ -29,7 +29,7 @@ const positionRemark = (startPosi, endPosi, driver) => {
   }
 };
 export const createSeasonJourney = (raceDetail, idx) => {
-  console.log(raceDetail);
+  // console.log(raceDetail);
   let type,
     remark = '';
 

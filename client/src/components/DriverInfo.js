@@ -1,10 +1,11 @@
 import React from 'react';
 
+import { getCumulativePoints } from '../utilities/seasonPoints';
 const DriverInfo = ({ apiData }) => {
   const { data } = apiData;
   const driverDetails = data.Races[0].Results[0].Driver;
 
-  console.log(driverDetails);
+  // console.log(data.Races);
   return (
     <div>
       <div className='driver-name'>
@@ -19,6 +20,9 @@ const DriverInfo = ({ apiData }) => {
         <div className='wiki-link'>
           <a href={driverDetails.url}>Wiki Link</a>
         </div>
+      </div>
+      <div className='season-points'>
+        <span>{getCumulativePoints(data.Races)}</span>
       </div>
     </div>
   );
