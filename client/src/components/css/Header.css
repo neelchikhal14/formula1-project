@@ -1,0 +1,13 @@
+.nav__primary {
+  height: 7rem;
+  background-color: var(--clr-primary-red-base);
+  color: var(--clr-primary-white-base);
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+}
+
+.nav__primary__heading {
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+}

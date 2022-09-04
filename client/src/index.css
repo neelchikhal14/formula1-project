@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'f1reg';
+  src: local('f1reg'), url('./fonts/Formula1-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'f1bold';
+  src: local('f1bold'), url('./fonts//Formula1-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+:root {
+  --clr-primary-red-base: hsl(2, 100%, 44%);
+  --clr-primary-red-200: hsl(2, 100%, 55%);
+  --clr-primary-white-base: hsl(0, 0%, 100%);
+  --clr-primary-red-border-base: hsl(2, 100%, 44%);
+  --clr-primary-grey-border-base: hsl(240, 2%, 82%);
+  --clr-background: hsl(30, 27%, 96%);
+  --clr-danger-background: hsl(355, 70%, 91%);
+  --clr-success-background: hsl(134, 41%, 88%);
+  --clr-danger-text: hsl(354, 36%, 41%);
+  --clr-success-text: hsl(134, 61%, 21%);
+  --clr-button-background: hsl(240, 11%, 14%);
+  --clr-primary-black: hsl(240, 11%, 14%);
+
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+fieldset {
+  border: 0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  font-size: 1.6rem;
+  font-family: f1reg;
+  background-color: var(--clr-background);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
