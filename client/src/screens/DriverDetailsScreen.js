@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import Chart from '../components/Chart';
 import DriverInfo from '../components/DriverInfo';
 import DriverJourney from '../components/DriverJourney';
 import InputForm from '../components/InputForm';
+
+import MultiLineChart from '../components/MultiLineChart';
 
 import './css/DriverDetailsScreen.css';
 const DriverDetailsScreen = () => {
@@ -13,6 +16,10 @@ const DriverDetailsScreen = () => {
   return (
     <div className='driver__screen__container '>
       <InputForm apiData={apiData} setApiData={setApiData} />
+      {apiData && apiData.loading === false && apiData.data !== null && (
+        <Chart apiData={apiData} />
+      )}
+
       {apiData && apiData.loading === false && apiData.data !== null && (
         <DriverInfo apiData={apiData} />
       )}
