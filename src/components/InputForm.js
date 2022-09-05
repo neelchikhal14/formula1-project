@@ -17,7 +17,7 @@ const InputForm = ({ apiData, setApiData }) => {
       loading: false,
       error: null,
     }));
-    const url = `http://ergast.com/api/f1/${year}/drivers/${driverName}/results.json`;
+    const url = `https://ergast.com/api/f1/${year}/drivers/${driverName}/results.json`;
     setApiData((apiData) => ({
       ...apiData,
       loading: true,
