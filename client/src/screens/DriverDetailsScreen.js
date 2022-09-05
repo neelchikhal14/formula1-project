@@ -11,7 +11,7 @@ const DriverDetailsScreen = () => {
   return (
     <div>
       <InputForm apiData={apiData} setApiData={setApiData} />
-      <DriverInfo apiData={apiData} />
+      {apiData && apiData.data !== null && <DriverInfo apiData={apiData} />}
     </div>
   );
 };
