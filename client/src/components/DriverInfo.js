@@ -7,7 +7,7 @@ const DriverInfo = ({ apiData }) => {
   const { data } = apiData;
   const driverDetails = data.Races[0].Results[0].Driver;
 
-  // console.log(data.Races);
+  console.log(data);
   return (
     <div className='f1-driver-details-container'>
       <fieldset>
