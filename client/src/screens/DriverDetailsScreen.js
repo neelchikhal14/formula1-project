@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import DriverInfo from '../components/DriverInfo';
+import DriverJourney from '../components/DriverJourney';
 import InputForm from '../components/InputForm';
 
 const DriverDetailsScreen = () => {
@@ -12,6 +13,7 @@ const DriverDetailsScreen = () => {
     <div>
       <InputForm apiData={apiData} setApiData={setApiData} />
       {apiData && apiData.data !== null && <DriverInfo apiData={apiData} />}
+      {apiData && apiData.data !== null && <DriverJourney apiData={apiData} />}
     </div>
   );
 };
