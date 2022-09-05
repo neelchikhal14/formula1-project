@@ -1,0 +1,51 @@
+.driver-primary-details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.f1-driver-details-container > fieldset {
+  border-top: solid 10px var(--clr-primary-red-base);
+  border-right: solid 10px var(--clr-primary-red-base);
+
+  border-top-right-radius: 2.5rem;
+
+  position: relative;
+}
+
+.f1-driver-details-container > fieldset > legend {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: left;
+  position: absolute;
+  left: 0;
+  top: -2rem;
+  background-color: var(--clr-background);
+  padding: 0.5rem;
+}
+
+.driver-primary-details-box {
+  min-width: 25rem;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 2rem;
+  border-right: 2px solid var(--clr-primary-grey-border-base);
+  border-bottom: 2px solid var(--clr-primary-grey-border-base);
+  border-bottom-right-radius: 1.5rem;
+  padding: 0.5rem;
+}
+
+.driver-primary-detail-title {
+  font-size: 1.3rem;
+}
+.driver-primary-detail-value {
+  font-size: 3.6rem;
+}
+
+.driver-season-cumulative-points > span {
+  font-size: 2.5rem;
+  margin: 2rem;
+}

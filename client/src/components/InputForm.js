@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { drivers } from '../constants/drivers';
 import { yearRange } from '../constants/year';
+
+import './css/InputForm.css';
 const InputForm = ({ apiData, setApiData }) => {
   const [year, setYear] = useState(null);
   const [driverName, setDriverName] = useState('');
@@ -52,7 +54,7 @@ const InputForm = ({ apiData, setApiData }) => {
   };
 
   return (
-    <form onSubmit={handleSubmitJourney}>
+    <form onSubmit={handleSubmitJourney} className='input__form '>
       <label htmlFor='driver-select'>Choose A Driver:</label>
       <select
         id='driver-select'
@@ -83,7 +85,9 @@ const InputForm = ({ apiData, setApiData }) => {
           </option>
         ))}
       </select>
-      <button type='submit'>See Journey</button>
+      <button type='submit' className='see__journey__button'>
+        See Journey
+      </button>
     </form>
   );
 };
