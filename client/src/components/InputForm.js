@@ -10,6 +10,13 @@ const InputForm = ({ apiData, setApiData }) => {
 
   const handleSubmitJourney = (e) => {
     e.preventDefault();
+    //reset
+    setApiData((apiData) => ({
+      ...apiData,
+      data: null,
+      loading: false,
+      error: null,
+    }));
     const url = `http://ergast.com/api/f1/${year}/drivers/${driverName}/results.json`;
     setApiData((apiData) => ({
       ...apiData,
@@ -26,9 +33,7 @@ const InputForm = ({ apiData, setApiData }) => {
           }));
           setApiData((apiData) => ({
             ...apiData,
-            error: {
-              message: `No Data found for ${driverName.toUpperCase()} for the year ${year}`,
-            },
+            error: `No Data found for ${driverName.toUpperCase()} for the year ${year}`,
           }));
         } else {
           setApiData((apiData) => ({
